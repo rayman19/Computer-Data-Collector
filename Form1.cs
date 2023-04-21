@@ -132,12 +132,12 @@ namespace ComputerInfo
 
 
 
-            WebRequest request = WebRequest.Create("http://1c.ni.nlmk.com/engineering/hs/post/PCInformation/");
+            WebRequest request = WebRequest.Create(path);
             request.Method = "POST";
             request.ContentType = "application/json";
             
-            var username = "post_pc_info";
-            var password = "1234567yY!";
+            var username = user;
+            var password = passw;
 
             string encoded = System.Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1")
                                            .GetBytes(username + ":" + password));
